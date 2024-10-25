@@ -1,0 +1,24 @@
+<app-nav></app-nav>
+<div class="container">
+    <form [formGroup]="mobileForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="mobile">Enter Mobile No</label>
+        <input
+          type="text"
+          id="mobile"
+          class="form-control"
+          formControlName="mobile"
+          placeholder="Mobile number"
+        />
+        <!-- Error Message for Validation -->
+        <div *ngIf="mobile?.invalid && (mobile?.dirty || mobile?.touched)" class="error">
+          <small *ngIf="mobile?.errors?.['required']">Mobile number is required.</small>
+          <small *ngIf="mobile?.errors?.['pattern']">Invalid mobile number format.</small>
+        </div>
+      </div>
+      <button type="submit" [disabled]="mobileForm.invalid">Submit</button>
+    </form>
+  </div>
+
+  <app-footer></app-footer>
+  

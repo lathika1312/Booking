@@ -7,18 +7,23 @@ import { AppComponent } from './app.component';
 import { CustomerComponent } from './admin/customer/customer.component';
 import { NavComponent } from './layout/nav/nav.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { MobileComponent } from './admin/mobile/mobile.component';
+import { ReactiveFormsModule } from '@angular/forms'; // Import ReactiveFormsModule here
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomerComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    MobileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
