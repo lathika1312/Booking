@@ -1,11 +1,11 @@
 /* Container for the form */
-.booking-container {
+.mobile-form-container {
   padding: 30px;
   text-align: center; /* Center the entire booking container */
 }
 
 /* Route Info */
-.route-info {
+.mobile-form-route-info {
   display: flex;
   justify-content: space-between;
   background-color: #f5f5f5; /* Light gray */
@@ -16,22 +16,22 @@
 }
 
 /* Form styles */
-.form-group {
+.mobile-form-group {
   margin-bottom: 20px;
   text-align: left; /* Left align text within the form group */
 }
 
 /* Label styling */
-label {
+.mobile-form-label {
   font-weight: bold;
   display: block; /* Block display to keep label above input */
   margin-bottom: 5px; /* Margin below label */
   width: auto; /* Use auto width to adjust based on container */
-  margin-left: 120px; /* No left margin */
+  margin-left: 0; /* No left margin */
 }
 
 /* Input field */
-.form-control {
+.mobile-form-control {
   width: 80%; /* Reduced width for the input field */
   padding: 10px;
   border-radius: 4px;
@@ -41,13 +41,13 @@ label {
 }
 
 /* Error Message */
-.error {
+.mobile-form-error {
   color: red;
   font-size: 12px;
 }
 
 /* Button */
-.next-btn {
+.mobile-form-next-btn {
   padding: 10px 20px;
   background-color: #0056b3; /* Blue */
   color: white;
@@ -62,11 +62,11 @@ label {
 }
 
 /* Disabled Button Style */
-.next-btn:disabled {
+.mobile-form-next-btn:disabled {
   background-color: #cccccc; /* Disabled button color */
 }
 
 /* Hover Effect */
-.next-btn:hover {
+.mobile-form-next-btn:hover {
   background-color: #004494; /* Darker blue on hover */
 }

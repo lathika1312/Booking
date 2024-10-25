@@ -1,32 +1,31 @@
 <app-nav></app-nav>
 
 <div class="container">
-  <div class="booking-container">
-    <div class="route-info">
+  <div class="mobile-form-container">
+    <div class="mobile-form-route-info">
       <span>Bongaigaon Petro-chemical Town, Assam, India</span>
       <span>1527 KM</span>
       <span>Agra Cantonment, Uttar Pradesh, India</span>
     </div>
 
     <form [formGroup]="mobileForm" (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for="mobile">Enter Mobile No</label>
+      <div class="mobile-form-group">
+        <label for="mobile" class="mobile-form-label">Enter Mobile No</label>
         <input
           type="text"
           id="mobile"
-          class="form-control"
+          class="mobile-form-control"
           formControlName="mobile"
           placeholder="Mobile number"
         />
         <!-- Error Message for Validation -->
-        <div *ngIf="mobile?.invalid && (mobile?.dirty || mobile?.touched)" class="error">
+        <div *ngIf="mobile?.invalid && (mobile?.dirty || mobile?.touched)" class="mobile-form-error">
           <small *ngIf="mobile?.errors?.['required']">Mobile number is required.</small>
           <small *ngIf="mobile?.errors?.['pattern']">Invalid mobile number format.</small>
         </div>
       </div>
       
-      <button type="submit" [disabled]="mobileForm.invalid" class="next-btn">Submit</button>
-
+      <button type="submit" [disabled]="mobileForm.invalid" class="mobile-form-next-btn">Submit</button>
     </form>
   </div>
 </div>
