@@ -1,113 +1,93 @@
 /* Navigation Bar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: white;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .logo {
-    width: 120px;
-    height: auto;
-  }
-  
-  .contact-info {
-    text-align: right;
-    font-size: 14px;
-  }
-  
-  .contact-number {
-    color: orange;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  /* Main Body */
-  .booking-container {
-    padding: 20px;
-  }
-  
-  .locations {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .location-detail {
-    flex: 1;
-    margin-right: 20px;
-  }
-  
-  .location-detail label {
-    font-size: 14px;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .location-detail input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .truck-selection, .goods-selection {
-    margin-bottom: 20px;
-  }
-  
-  select {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  
-  /* Next Button */
-  .next-button-container {
-    text-align: center;
-    margin-top: 30px;
-  }
-  
-  .next-button {
-    background-color: #007bff; /* Blue color */
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .next-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-  }
-  
-  /* Footer */
-  .footer {
-    background-color: #0056b3; /* Blue color */
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 30px;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+}
 
-  .weight-selection {
-    display: flex;
-    align-items: center;
-  }
-  
-  .weight-selection h3 {
-    margin-right: 10px;
-  }
-  
-  .weight-selection input {
-    margin-right: 10px;
-    width: 100px; /* Set a width for the input if needed */
-  }
-  
-  
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.contact-info {
+  text-align: right;
+  font-size: 14px;
+}
+
+.contact-number {
+  color: #fc9d01; /* Orange */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Main Body */
+.booking-container {
+  padding: 30px;
+  text-align: center;
+}
+
+.locations {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.location-detail {
+  flex: 1; /* Allows equal spacing among location details */
+  margin-right: 10px; /* Right margin for spacing */
+}
+
+.location-detail:last-child {
+  margin-right: 0; /* Remove margin for the last item */
+}
+
+.route-info {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.truck-selection, .goods-selection, .weight-input {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+select, input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.next-button {
+  padding: 10px 20px;
+  background-color: #0056b3; /* Blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Footer */
+.footer {
+  background-color: #0056b3; /* Blue */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}

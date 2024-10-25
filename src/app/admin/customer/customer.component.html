@@ -2,22 +2,12 @@
 <app-nav></app-nav>
 
 <!-- Main Body -->
-<div class="booking-container">
-  <div class="locations">
-    <div class="location-detail">
-      <label for="pickup">Pick-up Location</label>
-      <input type="text" id="pickup" placeholder="Enter pick-up location" [(ngModel)]="pickupLocation" />
-    </div>
-    
-    <div class="location-detail">
-      <label for="drop">Drop Location</label>
-      <input type="text" id="drop" placeholder="Enter drop location" [(ngModel)]="dropLocation" />
-    </div>
 
-    <div class="location-detail">
-      <label for="distance">Distance (KM)</label>
-      <input type="number" id="distance" placeholder="Enter distance in KM" [(ngModel)]="distance" />
-    </div>
+<div class="booking-container">
+  <div class="route-info">
+    <span>Bongaigaon Petro-chemical Town, Assam, India</span>
+    <span>1527 KM</span>
+    <span>Agra Cantonment, Uttar Pradesh, India</span>
   </div>
 
   <div class="truck-selection">
@@ -34,6 +24,12 @@
       <option value="" disabled selected hidden>Select Goods Type</option>
       <option *ngFor="let goods of goodsTypes" [value]="goods">{{ goods }}</option>
     </select>
+  </div>
+
+  <div class="weight-input" style="margin-top: 20px;">
+    <label for="weight">Enter Weight</label>
+    <input type="number" id="weight" placeholder="Approx Weight (1 Ton = 1000 KG)" [(ngModel)]="weight" />
+    <span>KG</span>
   </div>
 
   <!-- Next Button -->
