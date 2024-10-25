@@ -1,0 +1,26 @@
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .logo {
+    width: 120px;
+    height: auto;
+  }
+  
+  .contact-info {
+    text-align: right;
+    font-size: 14px;
+  }
+  
+  .contact-number {
+    color: orange;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  

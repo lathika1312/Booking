@@ -1,50 +1,45 @@
-<!-- Navigation Bar -->
-<nav class="navbar">
-    <img src="assets/logo.png" alt="TruckGuru Logo" class="logo" />
-    <div class="contact-info">
-      <span>GET IN TOUCH</span>
-      <span class="contact-number"> 9876543210</span>
+<!-- Include Nav Component -->
+<app-nav></app-nav>
+
+<!-- Main Body -->
+<div class="booking-container">
+  <div class="locations">
+    <div class="location-detail">
+      <label for="pickup">Pick-up Location</label>
+      <input type="text" id="pickup" placeholder="Enter pick-up location" [(ngModel)]="pickupLocation" />
     </div>
-  </nav>
-  
-  <!-- Main Body -->
-  <div class="booking-container">
-    <div class="locations">
-      <div class="location-detail">
-        <label for="pickup">Pick-up Location</label>
-        <input type="text" id="pickup" placeholder="Enter pick-up location" [(ngModel)]="pickupLocation" />
-      </div>
-      
-      <div class="location-detail">
-        <label for="drop">Drop Location</label>
-        <input type="text" id="drop" placeholder="Enter drop location" [(ngModel)]="dropLocation" />
-      </div>
-  
-      <div class="location-detail">
-        <label for="distance">Distance (KM)</label>
-        <input type="number" id="distance" placeholder="Enter distance in KM" [(ngModel)]="distance" />
-      </div>
+    
+    <div class="location-detail">
+      <label for="drop">Drop Location</label>
+      <input type="text" id="drop" placeholder="Enter drop location" [(ngModel)]="dropLocation" />
     </div>
-  
-    <div class="truck-selection">
-      <h3>Truck Type</h3>
-      <select [(ngModel)]="selectedTruck" (change)="onTruckSelect()">
-        <option value="" disabled selected hidden>Select Truck</option> <!-- Placeholder option for Truck Type -->
-        <option *ngFor="let truck of truckTypes" [value]="truck">{{ truck }}</option>
-      </select>
-    </div>
-  
-    <div class="goods-selection" style="margin-top: 20px;">
-      <h3>Goods Type</h3>
-      <select [(ngModel)]="selectedGoods" (change)="onGoodsSelect()">
-        <option value="" disabled selected hidden>Select Goods Type</option> <!-- Placeholder option for Goods Type -->
-        <option *ngFor="let goods of goodsTypes" [value]="goods">{{ goods }}</option>
-      </select>
+
+    <div class="location-detail">
+      <label for="distance">Distance (KM)</label>
+      <input type="number" id="distance" placeholder="Enter distance in KM" [(ngModel)]="distance" />
     </div>
   </div>
-  
-  <!-- Footer -->
-  <footer class="footer">
-    <span>Copyright © RURU LLP</span>
-  </footer>
-  
+
+  <div class="truck-selection">
+    <h3>Truck Type</h3>
+    <select [(ngModel)]="selectedTruck" (change)="onTruckSelect()">
+      <option value="" disabled selected hidden>Select Truck</option>
+      <option *ngFor="let truck of truckTypes" [value]="truck">{{ truck }}</option>
+    </select>
+  </div>
+
+  <div class="goods-selection" style="margin-top: 20px;">
+    <h3>Goods Type</h3>
+    <select [(ngModel)]="selectedGoods" (change)="onGoodsSelect()">
+      <option value="" disabled selected hidden>Select Goods Type</option>
+      <option *ngFor="let goods of goodsTypes" [value]="goods">{{ goods }}</option>
+    </select>
+  </div>
+
+  <!-- Next Button -->
+  <div class="next-button-container" style="margin-top: 20px;">
+    <button class="next-button" (click)="onNext()">Next</button>
+  </div>
+</div>
+
+<app-footer></app-footer>

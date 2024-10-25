@@ -55,8 +55,8 @@
     border-radius: 4px;
   }
   
-  .truck-selection {
-    margin-top: 30px;
+  .truck-selection, .goods-selection {
+    margin-bottom: 20px;
   }
   
   select {
@@ -67,6 +67,26 @@
     border: 1px solid #ccc;
   }
   
+  /* Next Button */
+  .next-button-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .next-button {
+    background-color: #007bff; /* Blue color */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .next-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
   /* Footer */
   .footer {
     background-color: #0056b3; /* Blue color */
@@ -75,4 +95,19 @@
     padding: 15px 0;
     margin-top: 30px;
   }
+
+  .weight-selection {
+    display: flex;
+    align-items: center;
+  }
+  
+  .weight-selection h3 {
+    margin-right: 10px;
+  }
+  
+  .weight-selection input {
+    margin-right: 10px;
+    width: 100px; /* Set a width for the input if needed */
+  }
+  
   
