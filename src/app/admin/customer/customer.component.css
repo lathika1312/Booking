@@ -1,0 +1,78 @@
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .logo {
+    width: 120px;
+    height: auto;
+  }
+  
+  .contact-info {
+    text-align: right;
+    font-size: 14px;
+  }
+  
+  .contact-number {
+    color: orange;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Main Body */
+  .booking-container {
+    padding: 20px;
+  }
+  
+  .locations {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .location-detail {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .location-detail label {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .location-detail input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .truck-selection {
+    margin-top: 30px;
+  }
+  
+  select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #0056b3; /* Blue color */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+  }
+  
