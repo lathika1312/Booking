@@ -1,5 +1,13 @@
 <app-nav></app-nav>
+
 <div class="container">
+  <div class="booking-container">
+    <div class="route-info">
+      <span>Bongaigaon Petro-chemical Town, Assam, India</span>
+      <span>1527 KM</span>
+      <span>Agra Cantonment, Uttar Pradesh, India</span>
+    </div>
+
     <form [formGroup]="mobileForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label for="mobile">Enter Mobile No</label>
@@ -16,9 +24,11 @@
           <small *ngIf="mobile?.errors?.['pattern']">Invalid mobile number format.</small>
         </div>
       </div>
-      <button type="submit" [disabled]="mobileForm.invalid">Submit</button>
+      
+      <button type="submit" [disabled]="mobileForm.invalid" class="next-btn">Submit</button>
+
     </form>
   </div>
+</div>
 
-  <app-footer></app-footer>
-  
+<app-footer></app-footer>
