@@ -30,6 +30,21 @@
   text-align: center;
 }
 
+.locations {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.location-detail {
+  flex: 1; /* Allows equal spacing among location details */
+  margin-right: 10px; /* Right margin for spacing */
+}
+
+.location-detail:last-child {
+  margin-right: 0; /* Remove margin for the last item */
+}
+
 .route-info {
   display: flex;
   justify-content: space-between;
@@ -40,7 +55,7 @@
   margin-bottom: 20px;
 }
 
-.truck-selection, .goods-selection {
+.truck-selection, .goods-selection, .weight-input {
   margin-bottom: 20px;
   text-align: left;
 }
@@ -51,14 +66,14 @@ label {
   margin-bottom: 5px;
 }
 
-select {
+select, input[type="text"], input[type="number"] {
   width: 100%;
   padding: 10px;
   border-radius: 4px;
   border: 1px solid #ccc;
 }
 
-.next-btn {
+.next-button {
   padding: 10px 20px;
   background-color: #0056b3; /* Blue */
   color: white;
