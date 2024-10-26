@@ -29,45 +29,57 @@
 
     <div class="weight-input" style="margin-top: 20px;">
       <label for="weight">Enter Weight</label>
-      <input type="number" id="weight" placeholder="Approx Weight (1 Ton = 1000 KG)" [(ngModel)]="weight" />
+      <div class="weight-container">
+        <input type="number" id="weight" placeholder="Approx Weight (1 Ton = 1000 KG)" [(ngModel)]="weight" />
+        
+        <label for="weightUnit" class="unit-label">Select Weight Unit</label>
+        <select id="weightUnit" [(ngModel)]="weightUnit" class="weight-select">
+          <option value="kg">KG</option>
+          <option value="ton">Ton</option>
+        </select>
+      </div>
     </div>
 
-    <!-- Next Button -->
-    <div class="next-button-container" style="margin-top: 20px;">
+    <!-- Button Container for Step 1 -->
+    <div class="button-container" style="margin-top: 20px;">
+      <button class="next-button" (click)="goBack()">Back</button> <!-- Back button here -->
       <button class="next-button" (click)="onNext()">Next</button>
     </div>
   </div>
 
   <!-- Step 2: Mobile Details -->
-   
   <div *ngIf="step === 2" class="mobile-form-container">
     <div class="route-info">
-      <span>Bongaigaon Petro-chemical Town, Assam, India</span>
-      <span>1527 KM</span>
-      <span>Agra Cantonment, Uttar Pradesh, India</span>
+        <span>Bongaigaon Petro-chemical Town, Assam, India</span>
+        <span>1527 KM</span>
+        <span>Agra Cantonment, Uttar Pradesh, India</span>
     </div>
     <form [formGroup]="mobileForm" (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for="mobile">Enter Mobile No</label>
-        <input
-          type="text"
-          id="mobile"
-          class="form-control"
-          formControlName="mobile"
-          placeholder="Mobile number"
-        />
-        <div *ngIf="mobileForm.get('mobile')?.invalid && (mobileForm.get('mobile')?.dirty || mobileForm.get('mobile')?.touched)" class="error">
-          <small *ngIf="mobileForm.get('mobile')?.errors?.['required']">Mobile number is required.</small>
-          <small *ngIf="mobileForm.get('mobile')?.errors?.['pattern']">Invalid mobile number format.</small>
+        <div class="form-group">
+            <label for="mobile">Enter Mobile No</label>
+            <input
+                type="text"
+                id="mobile"
+                class="form-control"
+                formControlName="mobile"
+                placeholder="Mobile number"
+                maxlength="10"  
+                pattern="[0-9]*"  
+                inputmode="numeric"
+            />
+            <div *ngIf="mobileForm.get('mobile')?.invalid && (mobileForm.get('mobile')?.dirty || mobileForm.get('mobile')?.touched)" class="error">
+                <small *ngIf="mobileForm.get('mobile')?.errors?.['required']">Mobile number is required.</small>
+                <small *ngIf="mobileForm.get('mobile')?.errors?.['pattern']">Invalid mobile number format.</small>
+            </div>
         </div>
-      </div>
 
-      <div class="button-container" style="display: flex; justify-content: space-between; margin-top: 20px;">
-        <button type="button" class="next-button" (click)="goBack()">Back</button>
-        <button type="submit" [disabled]="mobileForm.invalid" class="next-btn">Submit</button>
-      </div>
+        <div class="button-container">
+            <button type="button" class="back-button" (click)="goBack()">Back</button>
+            <button type="submit" [disabled]="mobileForm.invalid" class="next-btn">Next</button>
+        </div>
     </form>
-  </div>
+</div>
+
 
   <!-- Step 3: Customer Details -->
   <div *ngIf="step === 3" class="customer-form-container">
@@ -82,11 +94,11 @@
         <label for="customerType">Customer Type</label>
         <select id="customerType" class="form-control" formControlName="customerType">
           <option value="" disabled selected hidden>Select Customer Type</option>
-          <option value="individual">Individual</option>
-          <option value="business">Business</option>
+          <option value="individual">Individual(Customer)</option>
+          <option value="business">Business(Industry)</option>
         </select>
       </div>
-    
+
       <div class="form-group">
         <label for="name">Name</label>
         <input
@@ -109,7 +121,7 @@
         />
       </div>
 
-      <div class="button-container" style="display: flex; justify-content: space-between; margin-top: 20px;">
+      <div class="button-container">
         <button type="button" class="next-button" (click)="goBack()">Back</button>
         <button type="submit" [disabled]="customerForm.invalid" class="next-btn">Submit</button>
       </div>
@@ -129,7 +141,7 @@
       </div>
       <div class="detail">
         <strong>Weight</strong>
-        <p>{{ weight }} Kg</p>
+        <p>{{ weight }} {{ weightUnit === 'kg' ? 'Kg' : 'Ton' }}</p>
       </div>
       <div class="detail">
         <strong>Goods Type</strong>
