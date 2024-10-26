@@ -53,10 +53,12 @@ export class CustomerComponent implements OnInit {
     }
   }
 
+  // Handle goods type selection
   onGoodsSelect() {
     // Logic for goods selection
   }
 
+  // Move to the next step
   onNext() {
     if (this.step === 1) {
       this.step++; // Move to step 2
@@ -73,6 +75,7 @@ export class CustomerComponent implements OnInit {
     }
   }
 
+  // Handle mobile form submission
   onSubmit() {
     console.log('Submitting Form, Current Step:', this.step);
     
